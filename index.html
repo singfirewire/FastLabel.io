@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>พิมพ์ใบปะหน้า</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>ใบปะหน้า</h1>
+
+  <form id="address-form">
+    <div>
+      <label for="sender-name">ชื่อผู้ส่ง:</label>
+      <input type="text" id="sender-name" name="sender-name" required>
+    </div>
+    <div>
+      <label for="sender-address">ที่อยู่ผู้ส่ง:</label>
+      <textarea id="sender-address" name="sender-address" required></textarea>
+    </div>
+    <div>
+      <label for="sender-phone">เบอร์โทรผู้ส่ง:</label>
+      <input type="tel" id="sender-phone" name="sender-phone">
+    </div>
+
+    <div>
+      <label for="recipient-name">ชื่อผู้รับ:</label>
+      <input type="text" id="recipient-name" name="recipient-name" required>
+    </div>
+    <div>
+      <label for="search-box">ค้นหาที่อยู่ผู้รับ:</label>
+      <input type="text" id="search-box" placeholder="รหัสไปรษณีย์ หรือ ชื่อตำบล">
+      <button type="button" id="search-button">ค้นหา</button>
+    </div>
+    <div id="search-results">
+      </div>
+    <div>
+      <label for="recipient-address">ที่อยู่ผู้รับ:</label>
+      <textarea id="recipient-address" name="recipient-address" required></textarea>
+    </div>
+    <div>
+      <label for="recipient-phone">เบอร์โทรผู้รับ:</label>
+      <input type="tel" id="recipient-phone" name="recipient-phone">
+    </div>
+
+    <div>
+      <label for="note">หมายเหตุ:</label>
+      <textarea id="note" name="note"></textarea>
+    </div>
+
+    <button type="submit">พิมพ์ใบปะหน้า</button>
+  </form>
+
+  <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore-compat.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
